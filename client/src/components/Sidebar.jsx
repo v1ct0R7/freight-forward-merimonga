@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { BuildingComplex, Truck, Users, Package, Headset } from "lucide-react"
+import { Building2, Truck, Users, Package, Headset, UserStar } from "lucide-react"
 
 const Sidebar = () => {
   return (
@@ -9,7 +9,7 @@ const Sidebar = () => {
 
         <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/companies"}>
 
-          <img className='w-5 h-5' src={BuildingComplex} alt="" />
+          <Building2 className='w-5 h-5' />
 
           <p className='hidden md:block'>Companies</p>
 
@@ -17,7 +17,7 @@ const Sidebar = () => {
 
         <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/drivers"}>
 
-          <img className='w-5 h-5' src={Truck} alt="" />
+          <Truck className='w-5 h-5' />
 
           <p className='hidden md:block'>Drivers</p>
 
@@ -25,7 +25,7 @@ const Sidebar = () => {
 
         <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/workers"}>
 
-          <img className='w-5 h-5' src={Headset} alt="" />
+          <Headset className='w-5 h-5' />
 
           <p className='hidden md:block'>Workers</p>
 
@@ -33,7 +33,7 @@ const Sidebar = () => {
 
         <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/orders"}>
 
-          <img className='w-5 h-5' src={Package} alt="" />
+          <Package className='w-5 h-5' />
 
           <p className='hidden md:block'>Orders</p>
 
@@ -41,9 +41,17 @@ const Sidebar = () => {
 
         <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/customers"}>
 
-          <img className='w-5 h-5' src={Users} alt="" />
+          <Users className='w-5 h-5' />
 
           <p className='hidden md:block'>Customers</p>
+
+        </NavLink>
+
+        <NavLink className="flex items-center gap-3 border border-gray-300 border-r-0 px-3 py-2 rounded-l" to={"/admin-dashboard"}>
+
+          <UserStar className='w-5 h-5' />
+
+          <p className='hidden md:block'>Admin Dashboard</p>
 
         </NavLink>
 

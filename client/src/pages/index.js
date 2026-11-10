@@ -1,7 +1,7 @@
 import AdminDashboard from "./AdminDashboard";
 import WorkerPanel from "./WorkerPanel";
 import Company from "./Company";
-import Customers from "./Cutomers";
+import Customers from "./Customers";
 import Drivers from "./Drivers";
 import Workers from "./Workers";
 
