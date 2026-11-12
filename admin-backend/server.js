@@ -1,17 +1,34 @@
-import express from "express"
-import cors from "cors"
+import express from "express";
+import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
+import connectCloudinary from "./config/cloudinary.js";
+import "./models/index.js";
+import userRouter from "./routes/userRoute.js";
+import productRouter from "./routes/productRoute.js";
+import cartRouter from "./routes/cartRoute.js";
+import orderRouter from "./routes/orderRoute.js";
+import companyRouter from "./routes/companyRoute.js";
+import driverRouter from "./routes/driverRoute.js";
+import workerRouter from "./routes/workerRoute.js";
+import customerRouter from "./routes/customerRoute.js";
 
-//app start
 const app = express();
 const port = process.env.PORT || 4000;
 connectDB();
+connectCloudinary();
 
-//middleware
 app.use(express.json());
 app.use(cors());
 
+app.use("/api/user", userRouter);
+app.use("/api/product", productRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
+app.use("/api/company", companyRouter);
+app.use("/api/driver", driverRouter);
+app.use("/api/worker", workerRouter);
+app.use("/api/customer", customerRouter);
 
 app.get("/", (req, res) => {
   res.send("API working");
