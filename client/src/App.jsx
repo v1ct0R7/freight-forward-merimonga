@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import { AdminDashboard, Company, Customers, Drivers, WorkerPanel, Workers } from "./pages"
 import Sidebar from "./components/Sidebar"
 
+export const backendUrl = import.meta.env.ADMIN_BACKEND_URL
 
 const App = () => {
   return (
