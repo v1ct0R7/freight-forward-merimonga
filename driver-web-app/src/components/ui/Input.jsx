@@ -1,5 +1,5 @@
 // components/ui/Input/Input.jsx
-import Label from "../Label/Label";
+import Label from "./Label";
 
 function Input({
                    label,
