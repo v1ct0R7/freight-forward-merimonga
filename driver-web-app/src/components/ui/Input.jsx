@@ -16,8 +16,8 @@ function Input({
             <div className="relative flex items-center">
                 {Icon && (
                     <Icon
-                        size={18}
-                        className="absolute left-3 top-1/2 -translate-y-1/2 text-black"
+                        size={24}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-dark-blue"
                     />
                 )}
                 <input
@@ -26,7 +26,7 @@ function Input({
                     onChange={onChange}
                     placeholder={placeholder}
                     required={required}
-                    className="w-full border border-gray-300 rounded-full px-3 py-2 pl-10 text-sm focus:outline-none focus:border-orange-400"
+                    className="w-full border border-light-blue bg-lighter-blue rounded-lg px-3 py-2 pl-10 text-lg focus:outline-none focus:border-dark-blue"
                 />
             </div>
         </div>
