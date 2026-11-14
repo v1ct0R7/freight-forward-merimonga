@@ -2,8 +2,8 @@
 import {useState} from "react";
 import "./Login.css"
 import Logo from "../../assets/logo.png"
-import Blop1 from "../../assets/blop-1.png"
-import Blop2 from "../../assets/blop-2.png"
+import Blob1 from "../../assets/blob-1.svg"
+import Blob2 from "../../assets/blob-2.svg"
 import Input from "../../components/ui/Input";
 import Label from "../../components/ui/Label";
 import Button from "../../components/ui/Button"
@@ -16,14 +16,14 @@ const Login = () => {
     return (
         <div className="page-background">
             <img
-                className="background-decoration blop-2-decoration"
-                src={Blop1}
+                className="background-decoration blob-2-decoration"
+                src={Blob1}
                 alt=""
             />
 
             <img
-                className="background-decoration blop-1-decoration"
-                src={Blop2}
+                className="background-decoration blob-1-decoration"
+                src={Blob2}
                 alt=""
             />
 

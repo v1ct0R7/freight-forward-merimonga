@@ -11,17 +11,16 @@
     z-index: 0;
     pointer-events: none;
     user-select: none;
-    opacity: 0.25;
 }
 
-.blop-1-decoration {
-    width: 260px;
+.blob-1-decoration {
+    width: 320px;
     bottom: 0%;
     right: 0%;
 }
 
-.blop-2-decoration {
-    width: 240px;
+.blob-2-decoration {
+    width: 290px;
     top: 0%;
     left: 0%;
 }
