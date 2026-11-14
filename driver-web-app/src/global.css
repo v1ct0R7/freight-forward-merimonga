@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   THEME
+   Everything inside @theme becomes a Tailwind class automatically.
+   The rule: the part after "--color-" is the name you use in classes.
+
+     --color-dark-blue   ->  text-dark-blue, bg-dark-blue, border-dark-blue
+     --color-primary     ->  text-primary,   bg-primary,   border-primary
+
+   Works with all the usual prefixes and tricks:
+     hover:bg-primary-dark     (only when hovering)
+     focus:border-dark-blue    (only when focused)
+     placeholder:text-dark-blue/50
+     border-dark-blue/30       (same color, 30% opacity = lighter version)
+
+   Theme values are also available as plain CSS variables, if you ever write
+   custom CSS: color: var(--color-dark-blue);
+   ========================================================================== */
+
+@theme {
+    /* ---- Brand colors (from the logo) ---- */
+    --color-dark-blue: #012658;     /* logo navy: icons, input focus, headings */
+    --color-primary: #ff6a2b;       /* main orange: buttons. Logo orange is #fe6800 if you want it exact */
+    --color-primary-dark: #e65a1f;  /* darker orange for hover / pressed buttons */
+
+    /* ---- Support colors ---- */
+    --color-light-blue: #A7BFEB;    /* very light blue: input background, soft areas */
+    --color-lighter-blue: #F0F6FF;
+    --color-dark: #1e2a38;          /* body text */
+    --color-background: #ffffff;
+    --color-border: #e6e9ed;
+    --color-muted: #6b7280;         /* secondary text */
+
+    /* ---- Status colors (for later: errors, success) ---- */
+    --color-success: #16a34a;       /* the green check screen: bg-success */
+    --color-danger: #dc2626;        /* error messages: text-danger */
+
+    /* ---- Shadows ---- */
+    /* Name -> class:  --shadow-card  ->  shadow-card */
+    --shadow-card: 0 0 20px rgba(1, 38, 88, 0.15);   /* bluish glow for cards and forms */
+
+    /* ---- Rounded corners ---- */
+    /* --radius-card  ->  rounded-card */
+    --radius-card: 1.5rem;
+
+    /* ---- Font (uncomment and change when you pick one) ---- */
+    /* --font-sans: "Inter", sans-serif;  ->  applies to font-sans (the default) */
+}
+
+/* ==========================================================================
+   EXAMPLES FOR LATER (these are class names, not CSS. Use them in JSX)
+
+   Input, normal vs focus:
+     className="border border-dark-blue/30 bg-light-blue
+                focus:border-dark-blue focus:outline-none"
+
+   Icon color (icons follow the text color):
+     className="text-dark-blue"
+
+   Main button / secondary button:
+     className="bg-primary text-white hover:bg-primary-dark"
+     className="border border-dark-blue text-dark-blue bg-transparent"
+
+   Step card (floating over the map):
+     className="bg-background rounded-card shadow-card p-4"
+
+   Secondary text and dividers:
+     className="text-muted"       className="border-t border-border"
+
+   Green "no jobs" screen:
+     className="bg-success text-white"
+
+   Error message under a field:
+     className="text-danger text-sm"
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE STYLES (plain CSS, not classes)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
