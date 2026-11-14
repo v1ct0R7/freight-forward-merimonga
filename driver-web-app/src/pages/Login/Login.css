@@ -1,1 +1,27 @@
 /*driver-web-app/src/pages/Login/Login.css*/
+.page-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background-decoration {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.25;
+}
+
+.blop-1-decoration {
+    width: 260px;
+    bottom: 0%;
+    right: 0%;
+}
+
+.blop-2-decoration {
+    width: 240px;
+    top: 0%;
+    left: 0%;
+}
