@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { backendUrl } from '../App'
+import { backendUrl } from '../../App'
 import axios from 'axios'
 
 const Add = () => {
@@ -21,7 +21,7 @@ const Add = () => {
       formData.append("phone", phone)
       formData.append("address", address)
 
-      const response = await axios.post(backendUrl + "/api/product/add", formData, { headers: { token } })
+      const response = await axios.post(backendUrl + "/add", formData, { headers: { token } })
 
       if (response.data.success) {
         setName('')
@@ -31,14 +31,16 @@ const Add = () => {
       } else {
         console.log("error in else---", error);
       }
-      
+
     } catch (error) {
       console.log("error in catch---", error);
     }
   }
 
   return (
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler}
+      className='flex flex-col w-full items-start gap-3'
+    >
       <p>ALL COMPANIES</p>
       <div>
 
